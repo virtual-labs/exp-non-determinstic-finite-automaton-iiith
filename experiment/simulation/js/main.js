@@ -1,5 +1,5 @@
 /*****
- * File containing main logic to display DFA
+ * File containing main logic to display NFA
  *
  */
 
@@ -7,8 +7,8 @@ width = 500;
 height = 200;
 radius = 25;
 
-dfa = [dfa1, dfa2, dfa3];
-dfaIndex = 0
+nfa = [nfa1, nfa2, nfa3];
+nfaIndex = 0
 
 inputIndex = 0
 inputPointer = -1
@@ -22,11 +22,11 @@ function refreshCanvas(){
   curr = ""
   if(inputPointer != -1){
     console.log("before", inputPointer, curr);
-    // console.log(dfa[dfaIndex]["input"]);
-    curr = dfa[dfaIndex]["input"][inputIndex]["states"][inputPointer];
+    // console.log(nfa[nfaIndex]["input"]);
+    curr = nfa[nfaIndex]["input"][inputIndex]["states"][inputPointer];
     console.log("after", inputPointer, curr);
   }
-  res = displayCanvas(canvas, dfa[dfaIndex], inputPointer, curr);
+  res = displayCanvas(canvas, nfa[nfaIndex], inputPointer, curr);
 
   nodes = res[0]
   edges = res[1]
@@ -42,13 +42,13 @@ function resetInput(){
 function refreshInput(){
   inputContainer = document.getElementById("input_container");
   clearElem(inputContainer);
-  for(let i=0;i<dfa[dfaIndex]["input"][inputIndex]["string"].length;++i){
+  for(let i=0;i<nfa[nfaIndex]["input"][inputIndex]["string"].length;++i){
     textColor = "black";
     if(inputPointer == i){
       textColor = "red";
     }
     span = newElement("font", [["id", "text_"+i], ["color", textColor]]);
-    text = document.createTextNode(dfa[dfaIndex]["input"][inputIndex]["string"][i]);
+    text = document.createTextNode(nfa[nfaIndex]["input"][inputIndex]["string"][i]);
     span.appendChild(text);
     inputContainer.appendChild(span);
   }
@@ -60,13 +60,13 @@ window.addEventListener('load', function(e){
   refreshInput();
   refreshCanvas();
 
-  // Event listener for changing DFA
-  changeDFA = document.getElementById("change_dfa");
-  changeDFA.addEventListener("click", function(e){
+  // Event listener for changing NFA
+  changeNFA = document.getElementById("change_nfa");
+  changeNFA.addEventListener("click", function(e){
     clearElem(canvas);
-    dfaIndex = dfaIndex + 1;
-    if(dfaIndex >= dfa.length){
-      dfaIndex = 0;
+    nfaIndex = nfaIndex + 1;
+    if(nfaIndex >= nfa.length){
+      nfaIndex = 0;
     }
     refreshCanvas();
     resetInput();
@@ -76,7 +76,7 @@ window.addEventListener('load', function(e){
   changeInput = document.getElementById("change_input");
   changeInput.addEventListener("click", function(e){
     inputIndex = inputIndex + 1;
-    if(inputIndex >= dfa[dfaIndex]["input"].length){
+    if(inputIndex >= nfa[nfaIndex]["input"].length){
       inputIndex = 0;
     }
     refreshInput();
@@ -87,7 +87,7 @@ window.addEventListener('load', function(e){
   // Event listener for next
   next = document.getElementById("next");
   next.addEventListener("click", function(e){
-    if(inputPointer != dfa[dfaIndex]["input"][inputIndex]["string"].length){
+    if(inputPointer != nfa[nfaIndex]["input"][inputIndex]["string"].length){
       inputPointer = inputPointer + 1;
       refreshInput();
       refreshCanvas();

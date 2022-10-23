@@ -26,14 +26,14 @@ function clearElem(elem){
 }
 
 // Global variables width, height and radius need to be set before invoking this function
-function displayCanvas(canvas, dfa, inputPointer, currNode){
+function displayCanvas(canvas, nfa, inputPointer, currNode){
   sine45 = 0.707;
 
   nodes = [];
   edges = [];
 
-  // Parse nodes in DFA
-  dfa["vertices"].forEach(function(elem, index){
+  // Parse nodes in NFA
+  nfa["vertices"].forEach(function(elem, index){
     newnode = {
       "text": elem["text"],
       "type": elem["type"],
@@ -43,7 +43,7 @@ function displayCanvas(canvas, dfa, inputPointer, currNode){
     nodes.push(newnode);
   });
 
-  // Display nodes in DFA
+  // Display nodes in NFA
   nodes.forEach(function(elem){
     color = "black"
     stroke_width = "1px"
@@ -80,8 +80,8 @@ function displayCanvas(canvas, dfa, inputPointer, currNode){
     canvas.appendChild(textElem);
   });
 
-  // Parse edges in DFA
-  dfa["edges"].forEach(function(elem, index){
+  // Parse edges in NFA
+  nfa["edges"].forEach(function(elem, index){
     newEdge = {
       "text": elem["text"],
       "type": elem["type"],
@@ -144,7 +144,7 @@ function displayCanvas(canvas, dfa, inputPointer, currNode){
     edges.push(newEdge);
   });
 
-  // Display edges in DFA
+  // Display edges in NFA
   edges.forEach(function(elem){
     baseId = elem["start"]["text"]+"_"+elem["end"]["text"];
 

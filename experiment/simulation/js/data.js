@@ -1,7 +1,7 @@
 
 
-// DFA to accept even numbers
-const dfa1 = {
+// NFA to accept even numbers
+const nfa1 = {
   "vertices": [
     {"text": "A", "type": "start"},
     {"text": "B", "type": "accept"},
@@ -28,7 +28,7 @@ const dfa1 = {
   ]
 }
 
-const dfa2 = {
+const nfa2 = {
   "vertices": [
     {"text": "A", "type": "start"},
     {"text": "B", "type": "none"},
@@ -58,7 +58,7 @@ const dfa2 = {
   ]
 }
 
-const dfa3 = {
+const nfa3 = {
   "vertices": [
     {"text": "A", "type": "start"},
     {"text": "B", "type": "none"},
