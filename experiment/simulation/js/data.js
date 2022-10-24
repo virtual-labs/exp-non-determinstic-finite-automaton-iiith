@@ -87,33 +87,3 @@ const nfa3 = {
     }
   ]
 }
-
-// const nfa3 = {
-//   "vertices": [
-//     {"text": "A", "type": "start"},
-//     {"text": "B", "type": "none"},
-//     {"text": "C", "type": "none"},
-//     {"text": "D", "type": "accept"}
-//   ],
-//   "edges": [
-//     {"start": "A", "end": "A", "text": "1", "type": "self"},
-//     {"start": "A", "end": "B", "text": "0", "type": "forward"},
-//     {"start": "B", "end": "C", "text": "0", "type": "forward"},
-//     {"start": "C", "end": "D", "text": "0", "type": "forward"},
-//     {"start": "D", "end": "D", "text": "0,1", "type": "self"}
-//   ],
-//   "input": [
-//     {
-//       "string": "1000",
-//       "states": ["A", "A", "B", "C", "D"]
-//     },
-//     {
-//       "string": "00010",
-//       "states": ["A", "B", "C", "D", "D", "D"]
-//     },
-//     {
-//       "string": "101",
-//       "states": ["A", "A", "B", "B"]
-//     }
-//   ]
-// }

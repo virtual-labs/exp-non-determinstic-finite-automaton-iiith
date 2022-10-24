@@ -79,8 +79,8 @@ window.addEventListener('load', function(e){
     if(inputIndex >= nfa[nfaIndex]["input"].length){
       inputIndex = 0;
     }
-    refreshInput();
     inputPointer = -1;
+    refreshInput();
     refreshCanvas();
   });
 
