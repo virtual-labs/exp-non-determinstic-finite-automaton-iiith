@@ -16,15 +16,18 @@ const nfa1 = {
   "input": [
     {
       "string": "010110",
-      "states": ["A", "A", "B", "C", "D", "D", "D"]
+      "states": ["A", "A", "B", "C", "D", "D", "D"],
+      "reject_path": ["A", "A", "A", "A", "A", "B", "C"]
     },
     {
       "string": "1011111",
-      "states": ["A", "B", "C", "D", "D", "D", "D", "D"]
+      "states": ["A", "B", "C", "D", "D", "D", "D", "D"],
+      "reject_path": ["A", "A", "A", "B", "B", "B", "B", "B"]
     },
     {
       "string": "001101111",
-      "states": ["A", "A", "A", "A", "B", "C", "D", "D", "D", "D"]
+      "states": ["A", "A", "A", "A", "B", "C", "D", "D", "D", "D"],
+      "reject_path": ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A"]
     }
   ]
 }
@@ -43,15 +46,18 @@ const nfa2 = {
   "input": [
     {
       "string": "11010",
-      "states": ["A", "A", "A", "A", "B", "C"]
+      "states": ["A", "A", "A", "A", "B", "C"],
+      "reject_path": ["A", "A", "A", "A", "A", "A"]
     },
     {
       "string": "1111",
-      "states": ["A", "A", "A", "B", "C"]
+      "states": ["A", "A", "A", "B", "C"],
+      "reject_path": ["A", "A", "A", "A", "B"]
     },
     {
       "string": "0011011",
-      "states": ["A", "A", "A", "A", "A", "A", "B", "C"]
+      "states": ["A", "A", "A", "A", "A", "A", "B", "C"],
+      "reject_path": ["A", "A", "A", "A", "A", "A", "A", "B"]
     }
   ]
 }
@@ -75,15 +81,18 @@ const nfa3 = {
   "input": [
     {
       "string": "1001",
-      "states": ["A", "B", "C", "D", "E"]
+      "states": ["A", "B", "C", "D", "E"],
+      "reject_path": ["A", "B", "C", "D", "D"]
     },
     {
       "string": "100011",
-      "states": ["A", "B", "B", "C", "D", "D", "E"]
+      "states": ["A", "B", "B", "C", "D", "D", "E"],
+      "reject_path": ["A", "B", "B", "C", "D", "D", "D"]
     },
     {
       "string": "11001",
-      "states": ["A", "B", "B", "C", "D", "E"]
+      "states": ["A", "B", "B", "C", "D", "E"],
+      "reject_path": ["A", "B", "B", "C", "D", "D"]
     }
   ]
 }

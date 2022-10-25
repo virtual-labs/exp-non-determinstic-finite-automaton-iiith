@@ -16,15 +16,21 @@ inputPointer = -1
 nodes = []
 edges = []
 
+path_state = "acc";
+
 function refreshCanvas(){
   clearElem(canvas);
 
   curr = ""
   if(inputPointer != -1){
-    console.log("before", inputPointer, curr);
+    // console.log("before", inputPointer, curr);
     // console.log(nfa[nfaIndex]["input"]);
-    curr = nfa[nfaIndex]["input"][inputIndex]["states"][inputPointer];
-    console.log("after", inputPointer, curr);
+    if(path_state == "acc"){
+      curr = nfa[nfaIndex]["input"][inputIndex]["states"][inputPointer];
+    }else{
+      curr = nfa[nfaIndex]["input"][inputIndex]["reject_path"][inputPointer];
+    }
+    // console.log("after", inputPointer, curr);
   }
   res = displayCanvas(canvas, nfa[nfaIndex], inputPointer, curr);
 
@@ -102,6 +108,19 @@ window.addEventListener('load', function(e){
       refreshInput();
       refreshCanvas();
     }
+  });
+
+  // Event linstener for switch
+  path_switch = document.getElementById("path_switch");
+  path_switch.addEventListener("change", function(e){
+    if(path_state == "acc"){
+      path_state = "rej";
+    }else{
+      path_state = "acc";
+    }
+    inputPointer = -1;
+    refreshInput();
+    refreshCanvas();
   });
 
 });
