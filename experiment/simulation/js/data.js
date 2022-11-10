@@ -1,5 +1,76 @@
+/****
+  * File containing descriptions of NFA
+  *
+  */
 
 const nfa1 = {
+  "vertices": [
+    {"text": "A", "type": "start"},
+    {"text": "B", "type": "none"},
+    {"text": "C", "type": "none"},
+    {"text": "D", "type": "accept"}
+  ],
+  "edges": [
+    {"start": "A", "end": "B", "text": "1", "type": "forward"},
+    {"start": "B", "end": "B", "text": "0,1", "type": "self"},
+    {"start": "B", "end": "C", "text": "1", "type": "forward"},
+    {"start": "C", "end": "C", "text": "0,1", "type": "self"},
+    {"start": "C", "end": "B", "text": "0", "type": "backward"},
+    {"start": "C", "end": "D", "text": "1", "type": "forward"}
+  ],
+  "input": [
+    {
+      "string": "11011",
+      "states": ["A", "B", "C", "B", "C", "D"],
+      "reject_path": ["A", "B", "B", "B", "C", "C"]
+    },
+    {
+      "string": "100101",
+      "states": ["A", "B", "B", "B", "C", "C", "D"],
+      "reject_path": ["A", "B", "B", "B", "C", "C", "C"]
+    },
+    {
+      "string": "1010101",
+      "states": ["A", "B", "B", "C", "B", "C", "C", "D"],
+      "reject_path": ["A", "B", "B", "C", "B", "C", "C", "C"]
+    }
+  ]
+}
+
+const nfa2 = {
+  "vertices": [
+    {"text": "A", "type": "start"},
+    {"text": "B", "type": "none"},
+    {"text": "C", "type": "none"},
+    {"text": "D", "type": "accept"}
+  ],
+  "edges": [
+    {"start": "A", "end": "B", "text": "1", "type": "forward"},
+    {"start": "B", "end": "A", "text": "0", "type": "backward"},
+    {"start": "B", "end": "C", "text": "0", "type": "forward"},
+    {"start": "C", "end": "C", "text": "0,1", "type": "self"},
+    {"start": "C", "end": "D", "text": "1", "type": "forward"}
+  ],
+  "input": [
+    {
+      "string": "101011",
+      "states": ["A", "B", "A", "B", "C", "C", "D"],
+      "reject_path": ["A", "B", "A", "B", "C", "C", "C"]
+    },
+    {
+      "string": "10111",
+      "states": ["A", "B", "C", "C", "C", "D"],
+      "reject_path": ["A", "B", "C", "C", "C", "C"]
+    },
+    {
+      "string": "10011",
+      "states": ["A", "B", "C", "C", "C", "D"],
+      "reject_path": ["A", "B", "C", "C", "C", "C"]
+    }
+  ]
+}
+
+const nfa3 = {
   "vertices": [
     {"text": "A", "type": "start"},
     {"text": "B", "type": "none"},
@@ -32,7 +103,7 @@ const nfa1 = {
   ]
 }
 
-const nfa2 = {
+const nfa4 = {
   "vertices": [
     {"text": "A", "type": "start"},
     {"text": "B", "type": "none"},
@@ -62,7 +133,7 @@ const nfa2 = {
   ]
 }
 
-const nfa3 = {
+const nfa5 = {
   "vertices": [
     {"text": "A", "type": "start"},
     {"text": "B", "type": "none"},
