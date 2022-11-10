@@ -7,7 +7,7 @@ width = 500;
 height = 200;
 radius = 25;
 
-nfa = [nfa1, nfa2, nfa3];
+nfa = [nfa1, nfa2, nfa3, nfa4, nfa5];
 nfaIndex = 0
 
 inputIndex = 0
@@ -74,8 +74,8 @@ window.addEventListener('load', function(e){
     if(nfaIndex >= nfa.length){
       nfaIndex = 0;
     }
-    refreshCanvas();
     resetInput();
+    refreshCanvas();
   });
 
   // Event listener for changing input
