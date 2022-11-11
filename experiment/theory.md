@@ -46,3 +46,12 @@ Using the above definition, we can express the automaton in the figure above as 
 
 Note that the afore mentioned automaton does not have transitions for letter $1$ from state $q_2$ and for letter $0$ from states $q_1$ and $q_3$.
 
+
+Suppose we are running the NFA on a given string and we reach a state where we have multiple possibilities to proceed. For example, from state $q_1$, we have two possibilities, either stay put at $q_1$ or transition to $q_2$. At this point machine splits into two copies and then explores all possibilities in parallel. Each copy of the machine takes one of the possibilities and continues as before. If there are subsequent choices, the machine splits again. If the next input symbol does not appear on an arrow from the current state in the state diagram (equivalently, if the corresponding cell in the transition table is empty), that copy of the machine dies, along with the branch of computation leading up to it. If any of the copies of the machine is an accept state at the end of the input, the NFA accepts the string.
+
+![Possibilities arising from non-determinism](images/NFApossibilities.png)
+
+
+Abstractly, non-determinism is parallel computation where several copies of the machine could be running concurrently. Simply put, if any of the sequences of possibilities lead us to an accept state at the end of the input, the machine accepts the string.
+
+Going back to the example above, for a given input of $1101$, the sequence of possible states in a run of the machine that lead to an accept state are $q_1, q_1, q_2, q_3, q_4$.
