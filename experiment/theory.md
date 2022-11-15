@@ -96,6 +96,9 @@ A natural question that arises is -- are there languages that are accepted by NF
 
 A language $L$ is called a *regular language* if some Finite State Machine *recognizes* it. We shall discuss more about regular languages and regular expressions in the [next experiment](https://virtual-labs.github.io/exp-converting-regular-expression-iiith/).
 
-
+## Related topics
+1. [Language acceptance by Deterministic Finite Automata](https://virtual-labs.github.io/exp-determinstic-finite-automaton-iiith/)
+2. [Converting a NFA to a DFA](https://virtual-labs.github.io/exp-nfa-to-dfa-iiith/)
+3. [Converting a Regular Expression to NFA](https://virtual-labs.github.io/exp-converting-regular-expression-iiith/)
 
 
