@@ -59,7 +59,7 @@ Going back to the example above, for a given input of $1101$, the sequence of po
 
 ### $\varepsilon$-transitions
 
-In non-deterministic finite state automata, we can have transition arrows labeled by $\varepsilon$. In presence of $\varepsilons$, machine splits into copies, one following each of the $\varepsilon$-labeled transitions out of the current state, and one copy that stays in the current state.
+In non-deterministic finite state automata, we can have transition arrows labeled by $\varepsilon$. In presence of $\varepsilon$s, machine splits into copies, one following each of the $\varepsilon$-labeled transitions out of the current state, and one copy that stays in the current state.
 
 ### Example 2
 
@@ -88,6 +88,14 @@ Another equivalent way is as follows.
 
 ![Anothe equivalent NFA to NFA in example 2](images/NFAexample2b.png)
 
-**Regular languages:** A language $A$ is called a *regular language* if some Finite State Machine *recognizes* it.
+### NFAs vs DFAs
+
+A natural question that arises is -- are there languages that are accepted by NFAs but not by DFAs?
+
+### Regular languages
+
+A language $L$ is called a *regular language* if some Finite State Machine *recognizes* it. We shall discuss more about regular languages and regular expressions in the [next experiment](https://virtual-labs.github.io/exp-converting-regular-expression-iiith/).
+
+
 
 
