@@ -32,6 +32,14 @@ function refreshCanvas(){
     }
     // console.log("after", inputPointer, curr);
   }
+
+  NFADescriptionContainer = document.getElementById("NFA_description_container");
+  clearElem(NFADescriptionContainer);
+  span = newElement("font", [["id", "NFA_description"], ["color", textColor]]);
+  text = document.createTextNode(nfa[nfaIndex]["description"]);
+  span.appendChild(text);
+  NFADescriptionContainer.appendChild(text);
+
   res = displayCanvas(canvas, nfa[nfaIndex], inputPointer, curr);
 
   nodes = res[0]
