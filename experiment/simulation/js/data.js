@@ -4,6 +4,7 @@
   */
 
 const nfa1 = {
+  "description": "Does input being and terminate with 1 and contain an intermediate 1.",
   "vertices": [
     {"text": "A", "type": "start"},
     {"text": "B", "type": "none"},
@@ -38,6 +39,7 @@ const nfa1 = {
 }
 
 const nfa2 = {
+  "description": "Does input terminate with 1 and has 10 occuring.",
   "vertices": [
     {"text": "A", "type": "start"},
     {"text": "B", "type": "none"},
@@ -71,6 +73,7 @@ const nfa2 = {
 }
 
 const nfa3 = {
+  "description": "Does input contain 101.",
   "vertices": [
     {"text": "A", "type": "start"},
     {"text": "B", "type": "none"},
@@ -104,6 +107,7 @@ const nfa3 = {
 }
 
 const nfa4 = {
+  "description": "Is the last but one character of input 1.",
   "vertices": [
     {"text": "A", "type": "start"},
     {"text": "B", "type": "none"},
@@ -134,6 +138,7 @@ const nfa4 = {
 }
 
 const nfa5 = {
+  "description": "Does input start and terminate with 1 and contain 00.",
   "vertices": [
     {"text": "A", "type": "start"},
     {"text": "B", "type": "none"},
