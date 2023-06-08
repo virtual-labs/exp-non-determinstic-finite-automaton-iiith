@@ -9,9 +9,9 @@
         "c": "exactly one"
       },
       "explanations": {
-        "a": "Explanation 1",
-        "b": "Explanation 2",
-        "c": "Explanation 2"
+        "a": "",
+        "b": "",
+        "c": ""
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
@@ -24,9 +24,9 @@
         "c": "yes for only simple DFAs"
       },
       "explanations": {
-        "a": "Explanation 1",
-        "b": "Explanation 2",
-        "c": "Explanation 2"
+        "a": "",
+        "b": "",
+        "c": ""
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
@@ -38,8 +38,8 @@
         "b": "no"
       },
       "explanations": {
-        "a": "Explanation 1",
-        "b": "Explanation 2"
+        "a": "",
+        "b": ""
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
@@ -51,8 +51,8 @@
         "b": "no"
       },
       "explanations": {
-        "a": "Explanation 1",
-        "b": "Explanation 2"
+        "a": "",
+        "b": ""
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
