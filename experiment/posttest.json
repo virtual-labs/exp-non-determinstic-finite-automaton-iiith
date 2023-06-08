@@ -6,12 +6,12 @@
       "answers": {
         "a": "atleast one",
         "b": "atmost one",
-        "c": "exactly one",
+        "c": "exactly one"
       },
       "explanations": {
         "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
+        "c": "Explanation 2"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
