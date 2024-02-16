@@ -1,0 +1,48 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Can an NFA be described using a transition table?",
+      "answers": {
+        "a": "yes",
+        "b": "no",
+        "c": "yes only for simple NFAs"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Can empty transitions be removed from NFAs?",
+      "answers": {
+        "a": "yes",
+        "b": "no",
+        "c": "yes only for simple NFAs"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Is non-determinism same as the existential quantifier?",
+      "answers": {
+        "a": "yes",
+        "b": "no"
+      },
+      "explanations": {
+        "a": "",
+        "b": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    }
+  ]
+}
