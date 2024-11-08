@@ -416,8 +416,8 @@ text {
 
 #working-area {
   position: absolute;
-  width: 95%;
-  height: 95%;
+  width: 92%;
+  /* height: 95%; */
   margin: 2%;
 }
 
@@ -472,7 +472,7 @@ svg.wire path {
   font-size: 1.05rem;
   border-radius: 1em;
   padding: 0.6em 1.2em;
-  margin: 0px 10px;"
+  margin: 0px 10px;
 }
 
 .component-button{
@@ -592,4 +592,19 @@ svg.wire path {
 
 .bold-table{
   font-weight: bold;
+}
+
+ul#stack_list {
+  list-style-type: disc;
+  /* You can change 'disc' to 'circle', 'square', or 'none' for different styles */
+  padding-left: 20px;
+  text-align: left;
+}
+
+ul#stack_list li {
+  margin-bottom: 10px;
+  /* Add some space between steps */
+  font-family: Arial, sans-serif;
+  text-align: left;
+  font-size: 16px;
 }
