@@ -12,10 +12,10 @@ A non-deterministic finite automaton (NFA) is an abstraction of a memory-less ma
 
 
 
-<b>Name of Developer | <b> Nithish Raja, Suryajith Chillara, Venkatesh Choppella 
+<b>Name of Developer | <b> Nithish Raja, Meghana Chitturi, Suryajith Chillara, Venkatesh Choppella 
 :--|:--|
 <b> Institute | <b> International Institute of Information Technology, Hyderabad
-<b> Email id|     <b> {nithish.raja@research, suryajith.chillara@, venkatesh.choppella@}.iiit.ac.in
+<b> Email id|     <b> {nithish.raja@research., meghana.chitturi@students., suryajith.chillara@, venkatesh.choppella@}iiit.ac.in
 <b> Department |  <b> Center for Security, Theory and Algorithm Research (CSTAR), Software Engineering Research Center (SERC)
 
 ### Contributors List
@@ -24,3 +24,4 @@ SrNo | Name | Faculty or Student | Department| Institute | Email id
 :--|:--|:--|:--|:--|:--|
 1 | Suryajith Chillara | Faculty | CSTAR | IIIT Hyderabad | suryajith.chillara@iiit.ac.in
 2 | Nithish Raja | Student | CSTAR | IIIT Hyderabad | nithish.raja@research.iiit.ac.in
+3 | Meghana Chitturi | Student | CSTAR | IIIT Hyderabad | meghana.chitturi@students.iiit.ac.in
