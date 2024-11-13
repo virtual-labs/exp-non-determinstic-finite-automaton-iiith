@@ -19,7 +19,7 @@ For a set $ Q $, let $ \mathcal{P}(Q) $ be the power set of $ Q $. Let us now ch
 A *Non-Deterministic Finite State Machine* (FSM) is a $ 5 $-tuple $ (Q, \Sigma, \delta, q_0, F) $ where
 - $ Q $ is a finite set called *states*,
 - $ \Sigma $ is a finite set called *alphabet*,
-- $ \delta: Q\times (\Sigma\cup\{\varepsilon}) \rightarrow \mathcal{P}(Q) $ is the *transition function*,
+- $ \delta: Q\times (\Sigma\cup\{\varepsilon\})  \rightarrow \mathcal{P}(Q) $ is the *transition function*,
 - $ q_0 $ is the *start state*, and
 - $ F\subseteq Q $ is the set of *accept states*.
 
