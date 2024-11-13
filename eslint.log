@@ -1,0 +1,262 @@
+
+/home/runner/work/exp-non-determinstic-finite-automaton-iiith/exp-non-determinstic-finite-automaton-iiith/experiment/simulation/js/data.js
+    6:7  warning  'nfa1' is assigned a value but never used  no-unused-vars
+   41:7  warning  'nfa2' is assigned a value but never used  no-unused-vars
+   75:7  warning  'nfa3' is assigned a value but never used  no-unused-vars
+  109:7  warning  'nfa4' is assigned a value but never used  no-unused-vars
+  140:7  warning  'nfa5' is assigned a value but never used  no-unused-vars
+
+/home/runner/work/exp-non-determinstic-finite-automaton-iiith/exp-non-determinstic-finite-automaton-iiith/experiment/simulation/js/helper.js
+    7:3   warning  'elem' is not defined                        no-undef
+    9:5   warning  'elem' is not defined                        no-undef
+   11:10  warning  'elem' is not defined                        no-undef
+   14:10  warning  'newElement' is defined but never used       no-unused-vars
+   15:3   warning  'elem' is not defined                        no-undef
+   17:5   warning  'elem' is not defined                        no-undef
+   19:10  warning  'elem' is not defined                        no-undef
+   22:10  warning  'clearElem' is defined but never used        no-unused-vars
+   29:10  warning  'displayCanvas' is defined but never used    no-unused-vars
+   60:12  warning  'width' is not defined                       no-undef
+   60:32  warning  'width' is not defined                       no-undef
+   61:12  warning  'height' is not defined                      no-undef
+   75:35  warning  'radius' is not defined                      no-undef
+   75:89  warning  'radius' is not defined                      no-undef
+   88:15  warning  'radius' is not defined                      no-undef
+  103:13  warning  'radius' is not defined                      no-undef
+  156:20  warning  'radius' is not defined                      no-undef
+  167:54  warning  'radius' is not defined                      no-undef
+  175:54  warning  'radius' is not defined                      no-undef
+  183:58  warning  'radius' is not defined                      no-undef
+  222:11  warning  'deltaX' is assigned a value but never used  no-unused-vars
+
+/home/runner/work/exp-non-determinstic-finite-automaton-iiith/exp-non-determinstic-finite-automaton-iiith/experiment/simulation/js/main.js
+    6:1   warning  'width' is not defined                        no-undef
+    7:1   warning  'height' is not defined                       no-undef
+    8:1   warning  'radius' is not defined                       no-undef
+   10:1   warning  'nfa' is not defined                          no-undef
+   10:8   warning  'nfa1' is not defined                         no-undef
+   10:14  warning  'nfa2' is not defined                         no-undef
+   10:20  warning  'nfa3' is not defined                         no-undef
+   10:26  warning  'nfa4' is not defined                         no-undef
+   10:32  warning  'nfa5' is not defined                         no-undef
+   11:1   warning  'nfaIndex' is not defined                     no-undef
+   13:1   warning  'inputIndex' is not defined                   no-undef
+   14:1   warning  'inputPointer' is not defined                 no-undef
+   16:1   warning  'nodes' is not defined                        no-undef
+   17:1   warning  'edges' is not defined                        no-undef
+   19:1   warning  'path_state' is not defined                   no-undef
+   22:3   warning  'clearElem' is not defined                    no-undef
+   22:13  warning  'canvas' is not defined                       no-undef
+   24:3   warning  'curr' is not defined                         no-undef
+   25:6   warning  'inputPointer' is not defined                 no-undef
+   28:8   warning  'path_state' is not defined                   no-undef
+   29:7   warning  'curr' is not defined                         no-undef
+   29:14  warning  'nfa' is not defined                          no-undef
+   29:18  warning  'nfaIndex' is not defined                     no-undef
+   29:37  warning  'inputIndex' is not defined                   no-undef
+   29:59  warning  'inputPointer' is not defined                 no-undef
+   31:7   warning  'curr' is not defined                         no-undef
+   31:14  warning  'nfa' is not defined                          no-undef
+   31:18  warning  'nfaIndex' is not defined                     no-undef
+   31:37  warning  'inputIndex' is not defined                   no-undef
+   31:64  warning  'inputPointer' is not defined                 no-undef
+   36:3   warning  'NFADescriptionContainer' is not defined      no-undef
+   37:3   warning  'clearElem' is not defined                    no-undef
+   37:13  warning  'NFADescriptionContainer' is not defined      no-undef
+   38:3   warning  'span' is not defined                         no-undef
+   38:10  warning  'newElement' is not defined                   no-undef
+   39:3   warning  'text' is not defined                         no-undef
+   39:34  warning  'nfa' is not defined                          no-undef
+   39:38  warning  'nfaIndex' is not defined                     no-undef
+   41:3   warning  'NFADescriptionContainer' is not defined      no-undef
+   41:39  warning  'span' is not defined                         no-undef
+   42:3   warning  'span' is not defined                         no-undef
+   42:20  warning  'text' is not defined                         no-undef
+   45:3   warning  'res' is not defined                          no-undef
+   45:9   warning  'displayCanvas' is not defined                no-undef
+   45:23  warning  'canvas' is not defined                       no-undef
+   45:31  warning  'nfa' is not defined                          no-undef
+   45:35  warning  'nfaIndex' is not defined                     no-undef
+   45:46  warning  'inputPointer' is not defined                 no-undef
+   45:60  warning  'curr' is not defined                         no-undef
+   47:3   warning  'nodes' is not defined                        no-undef
+   47:11  warning  'res' is not defined                          no-undef
+   48:3   warning  'edges' is not defined                        no-undef
+   48:11  warning  'res' is not defined                          no-undef
+   52:3   warning  'inputIndex' is not defined                   no-undef
+   53:3   warning  'inputPointer' is not defined                 no-undef
+   59:3   warning  'inputContainer' is not defined               no-undef
+   60:3   warning  'clearElem' is not defined                    no-undef
+   60:13  warning  'inputContainer' is not defined               no-undef
+   61:17  warning  'nfa' is not defined                          no-undef
+   61:21  warning  'nfaIndex' is not defined                     no-undef
+   61:40  warning  'inputIndex' is not defined                   no-undef
+   62:5   warning  'textColor' is not defined                    no-undef
+   63:8   warning  'inputPointer' is not defined                 no-undef
+   64:7   warning  'textColor' is not defined                    no-undef
+   66:5   warning  'span' is not defined                         no-undef
+   66:12  warning  'newElement' is not defined                   no-undef
+   66:61  warning  'textColor' is not defined                    no-undef
+   67:5   warning  'text' is not defined                         no-undef
+   67:36  warning  'nfa' is not defined                          no-undef
+   67:40  warning  'nfaIndex' is not defined                     no-undef
+   67:59  warning  'inputIndex' is not defined                   no-undef
+   68:5   warning  'span' is not defined                         no-undef
+   68:22  warning  'text' is not defined                         no-undef
+   69:5   warning  'inputContainer' is not defined               no-undef
+   69:32  warning  'span' is not defined                         no-undef
+   74:3   warning  'stack' is not defined                        no-undef
+   75:3   warning  'clearElem' is not defined                    no-undef
+   75:13  warning  'stack' is not defined                        no-undef
+   88:3   warning  'stack' is not defined                        no-undef
+   91:3   warning  'listElem' is not defined                     no-undef
+   91:14  warning  'newElement' is not defined                   no-undef
+   92:3   warning  'textNode' is not defined                     no-undef
+   93:3   warning  'listElem' is not defined                     no-undef
+   93:24  warning  'textNode' is not defined                     no-undef
+   96:7   warning  'stack' is not defined                        no-undef
+   97:5   warning  'stack' is not defined                        no-undef
+   98:5   warning  'stack' is not defined                        no-undef
+   98:24  warning  'listElem' is not defined                     no-undef
+   98:34  warning  'stack' is not defined                        no-undef
+  100:5   warning  'stack' is not defined                        no-undef
+  100:23  warning  'listElem' is not defined                     no-undef
+  103:3   warning  'stack' is not defined                        no-undef
+  107:3   warning  'stack' is not defined                        no-undef
+  108:6   warning  'stack' is not defined                        no-undef
+  109:5   warning  'stack' is not defined                        no-undef
+  109:23  warning  'stack' is not defined                        no-undef
+  113:42  warning  'e' is defined but never used                 no-unused-vars
+  114:3   warning  'canvas' is not defined                       no-undef
+  121:3   warning  'changeNFA' is not defined                    no-undef
+  122:3   warning  'changeNFA' is not defined                    no-undef
+  122:48  warning  'e' is defined but never used                 no-unused-vars
+  123:5   warning  'clearElem' is not defined                    no-undef
+  123:15  warning  'canvas' is not defined                       no-undef
+  124:5   warning  'nfaIndex' is not defined                     no-undef
+  124:16  warning  'nfaIndex' is not defined                     no-undef
+  125:8   warning  'nfaIndex' is not defined                     no-undef
+  125:20  warning  'nfa' is not defined                          no-undef
+  126:7   warning  'nfaIndex' is not defined                     no-undef
+  134:3   warning  'changeInput' is not defined                  no-undef
+  135:3   warning  'changeInput' is not defined                  no-undef
+  135:50  warning  'e' is defined but never used                 no-unused-vars
+  136:5   warning  'inputIndex' is not defined                   no-undef
+  136:18  warning  'inputIndex' is not defined                   no-undef
+  137:8   warning  'inputIndex' is not defined                   no-undef
+  137:22  warning  'nfa' is not defined                          no-undef
+  137:26  warning  'nfaIndex' is not defined                     no-undef
+  138:7   warning  'inputIndex' is not defined                   no-undef
+  140:5   warning  'inputPointer' is not defined                 no-undef
+  147:3   warning  'next' is not defined                         no-undef
+  148:3   warning  'next' is not defined                         no-undef
+  148:43  warning  'e' is defined but never used                 no-unused-vars
+  149:8   warning  'inputPointer' is not defined                 no-undef
+  149:24  warning  'nfa' is not defined                          no-undef
+  149:28  warning  'nfaIndex' is not defined                     no-undef
+  149:47  warning  'inputIndex' is not defined                   no-undef
+  150:7   warning  'inputPointer' is not defined                 no-undef
+  150:22  warning  'inputPointer' is not defined                 no-undef
+  153:7   warning  'str' is not defined                          no-undef
+  154:10  warning  'inputPointer' is not defined                 no-undef
+  155:9   warning  'str' is not defined                          no-undef
+  155:34  warning  'nfa' is not defined                          no-undef
+  155:38  warning  'nfaIndex' is not defined                     no-undef
+  155:57  warning  'inputIndex' is not defined                   no-undef
+  155:79  warning  'inputPointer' is not defined                 no-undef
+  156:12  warning  'path_state' is not defined                   no-undef
+  157:11  warning  'str' is not defined                          no-undef
+  157:43  warning  'nfa' is not defined                          no-undef
+  157:47  warning  'nfaIndex' is not defined                     no-undef
+  157:66  warning  'inputIndex' is not defined                   no-undef
+  157:88  warning  'inputPointer' is not defined                 no-undef
+  158:11  warning  'str' is not defined                          no-undef
+  158:31  warning  'nfa' is not defined                          no-undef
+  158:35  warning  'nfaIndex' is not defined                     no-undef
+  158:54  warning  'inputIndex' is not defined                   no-undef
+  158:76  warning  'inputPointer' is not defined                 no-undef
+  160:11  warning  'str' is not defined                          no-undef
+  160:43  warning  'nfa' is not defined                          no-undef
+  160:47  warning  'nfaIndex' is not defined                     no-undef
+  160:66  warning  'inputIndex' is not defined                   no-undef
+  160:93  warning  'inputPointer' is not defined                 no-undef
+  161:11  warning  'str' is not defined                          no-undef
+  161:31  warning  'nfa' is not defined                          no-undef
+  161:35  warning  'nfaIndex' is not defined                     no-undef
+  161:54  warning  'inputIndex' is not defined                   no-undef
+  161:81  warning  'inputPointer' is not defined                 no-undef
+  164:10  warning  'inputPointer' is not defined                 no-undef
+  165:9   warning  'str' is not defined                          no-undef
+  167:18  warning  'str' is not defined                          no-undef
+  170:10  warning  'inputPointer' is not defined                 no-undef
+  170:24  warning  'nfa' is not defined                          no-undef
+  170:28  warning  'nfaIndex' is not defined                     no-undef
+  170:47  warning  'inputIndex' is not defined                   no-undef
+  172:9   warning  'computationStatus' is not defined            no-undef
+  174:13  warning  'itr' is not defined                          no-undef
+  174:19  warning  'itr' is not defined                          no-undef
+  174:23  warning  'nfa' is not defined                          no-undef
+  174:27  warning  'nfaIndex' is not defined                     no-undef
+  174:58  warning  'itr' is not defined                          no-undef
+  175:14  warning  'nfa' is not defined                          no-undef
+  175:18  warning  'nfaIndex' is not defined                     no-undef
+  175:40  warning  'itr' is not defined                          no-undef
+  175:56  warning  'curr' is not defined                         no-undef
+  176:16  warning  'nfa' is not defined                          no-undef
+  176:20  warning  'nfaIndex' is not defined                     no-undef
+  176:42  warning  'itr' is not defined                          no-undef
+  177:15  warning  'computationStatus' is not defined            no-undef
+  182:9   warning  'swal' is not defined                         no-undef
+  182:34  warning  'computationStatus' is not defined            no-undef
+  188:3   warning  'prev' is not defined                         no-undef
+  189:3   warning  'prev' is not defined                         no-undef
+  189:43  warning  'e' is defined but never used                 no-unused-vars
+  190:8   warning  'inputPointer' is not defined                 no-undef
+  191:7   warning  'inputPointer' is not defined                 no-undef
+  191:22  warning  'inputPointer' is not defined                 no-undef
+  199:3   warning  'path_switch' is not defined                  no-undef
+  200:3   warning  'path_switch' is not defined                  no-undef
+  200:51  warning  'e' is defined but never used                 no-unused-vars
+  201:8   warning  'path_state' is not defined                   no-undef
+  202:7   warning  'path_state' is not defined                   no-undef
+  204:7   warning  'path_state' is not defined                   no-undef
+  206:5   warning  'inputPointer' is not defined                 no-undef
+  212:3   warning  'controlContainerDisplay' is not defined      no-undef
+  213:3   warning  'instructionContainerDisplay' is not defined  no-undef
+  214:3   warning  'traceContainerDisplay' is not defined        no-undef
+  216:3   warning  'controlsToggle' is not defined               no-undef
+  217:3   warning  'controlsToggle' is not defined               no-undef
+  217:53  warning  'e' is defined but never used                 no-unused-vars
+  219:5   warning  'controlContainer' is not defined             no-undef
+  221:8   warning  'controlContainerDisplay' is not defined      no-undef
+  222:7   warning  'controlContainer' is not defined             no-undef
+  223:7   warning  'controlContainer' is not defined             no-undef
+  224:7   warning  'controlContainerDisplay' is not defined      no-undef
+  226:7   warning  'controlContainer' is not defined             no-undef
+  227:7   warning  'controlContainer' is not defined             no-undef
+  228:7   warning  'controlContainerDisplay' is not defined      no-undef
+  233:3   warning  'instructionToggle' is not defined            no-undef
+  234:3   warning  'instructionToggle' is not defined            no-undef
+  234:56  warning  'e' is defined but never used                 no-unused-vars
+  236:5   warning  'instructionContainer' is not defined         no-undef
+  238:8   warning  'instructionContainerDisplay' is not defined  no-undef
+  239:7   warning  'instructionContainer' is not defined         no-undef
+  240:7   warning  'instructionContainer' is not defined         no-undef
+  241:7   warning  'instructionContainerDisplay' is not defined  no-undef
+  243:7   warning  'instructionContainer' is not defined         no-undef
+  244:7   warning  'instructionContainer' is not defined         no-undef
+  245:7   warning  'instructionContainerDisplay' is not defined  no-undef
+  250:3   warning  'traceToggle' is not defined                  no-undef
+  251:3   warning  'traceToggle' is not defined                  no-undef
+  251:50  warning  'e' is defined but never used                 no-unused-vars
+  253:5   warning  'traceContainer' is not defined               no-undef
+  255:8   warning  'traceContainerDisplay' is not defined        no-undef
+  256:7   warning  'traceContainer' is not defined               no-undef
+  257:7   warning  'traceContainer' is not defined               no-undef
+  258:7   warning  'traceContainerDisplay' is not defined        no-undef
+  260:7   warning  'traceContainer' is not defined               no-undef
+  261:7   warning  'traceContainer' is not defined               no-undef
+  262:7   warning  'traceContainerDisplay' is not defined        no-undef
+
+✖ 253 problems (0 errors, 253 warnings)
+
