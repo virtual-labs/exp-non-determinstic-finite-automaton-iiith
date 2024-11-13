@@ -35,10 +35,12 @@ function refreshCanvas(){
 
   NFADescriptionContainer = document.getElementById("NFA_description_container");
   clearElem(NFADescriptionContainer);
-  span = newElement("font", [["id", "NFA_description"], ["color", textColor]]);
+  span = newElement("font", [["id", "NFA_description"], ["color", "brown"],["size","5.5"]]);
   text = document.createTextNode(nfa[nfaIndex]["description"]);
+  // Make the description bold
+  NFADescriptionContainer.appendChild(span);
   span.appendChild(text);
-  NFADescriptionContainer.appendChild(text);
+
 
   res = displayCanvas(canvas, nfa[nfaIndex], inputPointer, curr);
 
@@ -73,13 +75,32 @@ function resetStack(){
   clearElem(stack);
 }
 
-function addToStack(str){
+// function addToStack(str){
+//   stack = document.getElementById("stack_list");
+//   listElem = newElement("li", []);
+//   textNode = document.createTextNode(str);
+//   listElem.appendChild(textNode)
+//   stack.appendChild(listElem);
+
+// }
+
+function addToStack(str) {
   stack = document.getElementById("stack_list");
+
+  // Create a new list element with a bullet point
   listElem = newElement("li", []);
   textNode = document.createTextNode(str);
-  listElem.appendChild(textNode)
-  stack.appendChild(listElem);
+  listElem.appendChild(textNode);
 
+  // Prepend the new list item at the top of the stack (insert before the first child)
+  if (stack.firstChild) {
+    stack.firstChild.style.fontWeight = "normal";
+    stack.insertBefore(listElem, stack.firstChild);
+  } else {
+    stack.appendChild(listElem);
+  }
+  // Make the top element bold and blue
+  stack.firstChild.style.fontWeight = "bold";
 }
 
 function removeFromStack(){
@@ -131,17 +152,17 @@ window.addEventListener('load', function(e){
       refreshCanvas();
       str = "";
       if(inputPointer!=0){
-        str += "read character "+nfa[nfaIndex]["input"][inputIndex]["string"][inputPointer-1];
+        str += "Read character "+nfa[nfaIndex]["input"][inputIndex]["string"][inputPointer-1];
         if(path_state=="acc"){
-          str += " and moved from state "+nfa[nfaIndex]["input"][inputIndex]["states"][inputPointer-1];
-          str += " to state "+nfa[nfaIndex]["input"][inputIndex]["states"][inputPointer];
+          str += " and moved from State "+nfa[nfaIndex]["input"][inputIndex]["states"][inputPointer-1];
+          str += " to State "+nfa[nfaIndex]["input"][inputIndex]["states"][inputPointer];
         }else{
           str += " and moved from state "+nfa[nfaIndex]["input"][inputIndex]["reject_path"][inputPointer-1];
-          str += " to state "+nfa[nfaIndex]["input"][inputIndex]["reject_path"][inputPointer];
+          str += " to State "+nfa[nfaIndex]["input"][inputIndex]["reject_path"][inputPointer];
         }
       }
       if(inputPointer==0){
-        str += "moved to start state";
+        str += "Moved to Start State";
       }
       addToStack(str);
 
