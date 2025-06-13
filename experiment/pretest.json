@@ -2,46 +2,156 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "Can an NFA be described using a transition table?",
+      "question": "What is the main difference between a DFA and an NFA?",
       "answers": {
-        "a": "yes",
-        "b": "no",
-        "c": "yes only for simple NFAs"
+        "a": "DFA has more states than NFA",
+        "b": "NFA can have multiple transitions for the same input symbol from a state",
+        "c": "DFA can handle epsilon transitions while NFA cannot",
+        "d": "NFA is faster than DFA"
       },
       "explanations": {
-        "a": "",
-        "b": "",
-        "c": ""
+        "a": "Incorrect. The number of states is not the defining difference between DFA and NFA.",
+        "b": "Correct. In an NFA, from any state, there can be multiple transitions for the same input symbol, while in a DFA there is exactly one transition.",
+        "c": "Incorrect. It's the opposite - NFAs can handle epsilon transitions while DFAs cannot.",
+        "d": "Incorrect. Speed is not the distinguishing characteristic between DFA and NFA."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "In the formal definition of NFA, what does the transition function δ map to?",
+      "answers": {
+        "a": "A single state Q",
+        "b": "The power set of states P(Q)",
+        "c": "A pair of states",
+        "d": "The alphabet Σ"
+      },
+      "explanations": {
+        "a": "Incorrect. This describes the transition function of a DFA, not an NFA.",
+        "b": "Correct. In an NFA, the transition function δ: Q × (Σ ∪ {ε}) → P(Q) maps to the power set of states, allowing multiple possible next states.",
+        "c": "Incorrect. The transition function doesn't map to a pair of states.",
+        "d": "Incorrect. The transition function doesn't map to the alphabet."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What are epsilon (ε) transitions in an NFA?",
+      "answers": {
+        "a": "Transitions that require no input symbol",
+        "b": "Transitions that only accept empty strings",
+        "c": "Transitions that lead to reject states",
+        "d": "Transitions that are not allowed in NFAs"
+      },
+      "explanations": {
+        "a": "Correct. Epsilon transitions allow the automaton to change states without consuming any input symbol.",
+        "b": "Incorrect. Epsilon transitions are about state changes without input, not about accepting empty strings specifically.",
+        "c": "Incorrect. Epsilon transitions can lead to any state, not specifically reject states.",
+        "d": "Incorrect. Epsilon transitions are allowed and commonly used in NFAs."
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "Can empty transitions be removed from NFAs?",
+      "question": "How does an NFA handle multiple possible transitions from a state?",
       "answers": {
-        "a": "yes",
-        "b": "no",
-        "c": "yes only for simple NFAs"
+        "a": "It chooses the first transition randomly",
+        "b": "It splits into multiple copies and explores all possibilities in parallel",
+        "c": "It rejects the input immediately",
+        "d": "It chooses the transition that leads to an accept state"
       },
       "explanations": {
-        "a": "",
-        "b": "",
-        "c": ""
+        "a": "Incorrect. NFAs don't make random choices.",
+        "b": "Correct. When faced with multiple transitions, an NFA conceptually splits into multiple copies, each following a different path simultaneously.",
+        "c": "Incorrect. Multiple transitions don't cause immediate rejection.",
+        "d": "Incorrect. The NFA doesn't have foreknowledge of which path leads to acceptance."
       },
-      "correctAnswer": "a",
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "When does an NFA accept a string?",
+      "answers": {
+        "a": "When all computation paths lead to accept states",
+        "b": "When at least one computation path leads to an accept state",
+        "c": "When the majority of computation paths lead to accept states",
+        "d": "When no computation path leads to a reject state"
+      },
+      "explanations": {
+        "a": "Incorrect. Not all paths need to lead to accept states.",
+        "b": "Correct. An NFA accepts a string if at least one of its computation paths ends in an accept state.",
+        "c": "Incorrect. Majority is not the criterion for acceptance.",
+        "d": "Incorrect. The absence of reject states is not the acceptance criterion."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What happens when an NFA encounters an input symbol for which there is no transition from the current state?",
+      "answers": {
+        "a": "The entire machine rejects the string",
+        "b": "The machine waits for the next input symbol",
+        "c": "That particular copy of the machine dies",
+        "d": "The machine transitions to the start state"
+      },
+      "explanations": {
+        "a": "Incorrect. Only the specific copy dies, not the entire machine.",
+        "b": "Incorrect. The machine doesn't wait; it processes symbols sequentially.",
+        "c": "Correct. When there's no valid transition for an input symbol, that particular copy of the machine dies and stops processing.",
+        "d": "Incorrect. There's no automatic transition to the start state."
+      },
+      "correctAnswer": "c",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "What is the relationship between NFAs and DFAs in terms of computational power?",
+      "answers": {
+        "a": "NFAs are more powerful than DFAs",
+        "b": "DFAs are more powerful than NFAs",
+        "c": "NFAs and DFAs have equivalent computational power",
+        "d": "NFAs and DFAs are incomparable"
+      },
+      "explanations": {
+        "a": "Incorrect. NFAs are not more powerful than DFAs in terms of the languages they can recognize.",
+        "b": "Incorrect. DFAs are not more powerful than NFAs.",
+        "c": "Correct. NFAs and DFAs have equivalent computational power - every language accepted by an NFA can also be accepted by some DFA.",
+        "d": "Incorrect. They are comparable and equivalent in computational power."
+      },
+      "correctAnswer": "c",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "What is a regular language?",
+      "answers": {
+        "a": "A language that follows regular patterns",
+        "b": "A language that is recognized by some finite state machine",
+        "c": "A language with a finite number of strings",
+        "d": "A language that uses only regular expressions"
+      },
+      "explanations": {
+        "a": "Incorrect. 'Regular patterns' is too vague and not the formal definition.",
+        "b": "Correct. A regular language is formally defined as a language that is recognized by some finite state machine (DFA or NFA).",
+        "c": "Incorrect. Regular languages can be infinite.",
+        "d": "Incorrect. While regular languages can be described by regular expressions, this is not the defining characteristic."
+      },
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "Is non-determinism same as the existential quantifier?",
+      "question": "In the context of NFAs, what does 'non-determinism' mean?",
       "answers": {
-        "a": "yes",
-        "b": "no"
+        "a": "The machine makes random choices",
+        "b": "The machine cannot determine the correct path",
+        "c": "There can be multiple valid transitions for the same input",
+        "d": "The machine always rejects input"
       },
       "explanations": {
-        "a": "",
-        "b": ""
+        "a": "Incorrect. Non-determinism is not about randomness.",
+        "b": "Incorrect. Non-determinism doesn't mean the machine is confused or incorrect.",
+        "c": "Correct. Non-determinism means that for a given state and input symbol, there can be multiple valid transitions to different states.",
+        "d": "Incorrect. Non-determinism doesn't imply rejection."
       },
-      "correctAnswer": "a",
+      "correctAnswer": "c",
       "difficulty": "beginner"
     }
   ]
