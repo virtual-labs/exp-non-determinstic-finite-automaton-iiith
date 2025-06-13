@@ -2,60 +2,157 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "How many transition functions does a NFA have?",
+      "question": "What is the subset construction algorithm used for?",
       "answers": {
-        "a": "atleast one",
-        "b": "atmost one",
-        "c": "exactly one"
+        "a": "Converting a DFA to an NFA",
+        "b": "Converting an NFA to a DFA",
+        "c": "Minimizing the number of states in an NFA",
+        "d": "Finding the complement of an NFA"
       },
       "explanations": {
-        "a": "",
-        "b": "",
-        "c": ""
+        "a": "Incorrect. The subset construction converts NFAs to DFAs, not the other way around.",
+        "b": "Correct. The subset construction algorithm is used to convert an NFA to an equivalent DFA by creating states that represent subsets of the original NFA's states.",
+        "c": "Incorrect. The subset construction doesn't minimize NFAs; it converts them to DFAs.",
+        "d": "Incorrect. The subset construction is not used for finding complements."
       },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
     },
     {
-      "question": "Can an NFA be converted to a DFA?",
+      "question": "In the worst case, how many states might a DFA have when converted from an NFA with n states?",
       "answers": {
-        "a": "yes",
-        "b": "no",
-        "c": "yes for only simple DFAs"
+        "a": "n states",
+        "b": "n² states",
+        "c": "2ⁿ states",
+        "d": "n! states"
       },
       "explanations": {
-        "a": "",
-        "b": "",
-        "c": ""
+        "a": "Incorrect. The DFA typically requires more states than the original NFA.",
+        "b": "Incorrect. The number of states can be much larger than quadratic.",
+        "c": "Correct. In the worst case, the equivalent DFA can have up to 2ⁿ states, as each state in the DFA corresponds to a subset of the NFA's states.",
+        "d": "Incorrect. The number of states is exponential, not factorial."
       },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
+      "correctAnswer": "c",
+      "difficulty": "advanced"
     },
     {
-      "question": "Can an NFA be constructed such that the final symbol in input has occured before?",
+      "question": "How do you eliminate epsilon transitions from an NFA?",
       "answers": {
-        "a": "yes",
-        "b": "no"
+        "a": "Remove all epsilon transitions and their target states",
+        "b": "Replace epsilon transitions with regular transitions",
+        "c": "Compute epsilon closure and add direct transitions",
+        "d": "Convert the NFA to a DFA first"
       },
       "explanations": {
-        "a": "",
-        "b": ""
+        "a": "Incorrect. Simply removing epsilon transitions would change the language accepted.",
+        "b": "Incorrect. Epsilon transitions cannot be directly replaced with regular transitions.",
+        "c": "Correct. To eliminate epsilon transitions, you compute the epsilon closure of each state and add direct transitions to preserve the same language acceptance.",
+        "d": "Incorrect. You can eliminate epsilon transitions without converting to a DFA."
       },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
+      "correctAnswer": "c",
+      "difficulty": "advanced"
     },
     {
-      "question": "Can an NFA be constructed such that the final symbol in input has never occured?",
+      "question": "What is the epsilon closure of a state in an NFA?",
       "answers": {
-        "a": "yes",
-        "b": "no"
+        "a": "The set of states reachable by epsilon transitions only",
+        "b": "The set of states that can reach the given state by epsilon transitions",
+        "c": "The set of all states in the NFA",
+        "d": "The set of accept states reachable by epsilon transitions"
       },
       "explanations": {
-        "a": "",
-        "b": ""
+        "a": "Correct. The epsilon closure of a state is the set of all states that can be reached from that state using only epsilon transitions (including the state itself).",
+        "b": "Incorrect. This describes the reverse epsilon closure, not the standard epsilon closure.",
+        "c": "Incorrect. The epsilon closure is typically a subset of all states.",
+        "d": "Incorrect. The epsilon closure includes all reachable states, not just accept states."
       },
       "correctAnswer": "a",
-      "difficulty": "beginner"
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Which of the following operations is NOT closed under regular languages?",
+      "answers": {
+        "a": "Union",
+        "b": "Intersection",
+        "c": "Complement",
+        "d": "Context-free intersection"
+      },
+      "explanations": {
+        "a": "Incorrect. Regular languages are closed under union.",
+        "b": "Incorrect. Regular languages are closed under intersection.",
+        "c": "Incorrect. Regular languages are closed under complement.",
+        "d": "Correct. The intersection of a regular language with a context-free language is not necessarily regular, so regular languages are not closed under this operation."
+      },
+      "correctAnswer": "d",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "What is the time complexity of simulating an NFA with n states on an input string of length m?",
+      "answers": {
+        "a": "O(m)",
+        "b": "O(mn)",
+        "c": "O(mn²)",
+        "d": "O(2ⁿm)"
+      },
+      "explanations": {
+        "a": "Incorrect. The simulation requires more than linear time in the input length.",
+        "b": "Correct. Simulating an NFA requires O(mn) time, where we process each of the m input symbols and potentially visit all n states.",
+        "c": "Incorrect. The time complexity is not quadratic in the number of states.",
+        "d": "Incorrect. While the equivalent DFA might have exponential states, direct NFA simulation is more efficient."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "In practical applications, why might NFAs be preferred over DFAs despite their non-determinism?",
+      "answers": {
+        "a": "NFAs are always faster to execute",
+        "b": "NFAs require less memory",
+        "c": "NFAs are often more compact and easier to construct",
+        "d": "NFAs can recognize more languages"
+      },
+      "explanations": {
+        "a": "Incorrect. NFAs are typically slower to simulate than DFAs.",
+        "b": "Incorrect. NFAs don't necessarily require less memory during execution.",
+        "c": "Correct. NFAs are often more compact and intuitive to construct, especially when modeling systems with multiple possible behaviors or when building from regular expressions.",
+        "d": "Incorrect. NFAs and DFAs recognize the same class of languages (regular languages)."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What happens during the subset construction when an NFA state has no outgoing transition for a given input symbol?",
+      "answers": {
+        "a": "The construction fails",
+        "b": "A dead state is created in the DFA",
+        "c": "The input symbol is ignored",
+        "d": "That state is not included in the current subset"
+      },
+      "explanations": {
+        "a": "Incorrect. The construction doesn't fail; it handles missing transitions gracefully.",
+        "b": "Incorrect. Dead states are created for different reasons in DFA construction.",
+        "c": "Incorrect. Input symbols are never ignored in the construction.",
+        "d": "Correct. When an NFA state has no transition for a given input symbol, that state simply doesn't contribute any states to the next subset in the DFA construction."
+      },
+      "correctAnswer": "d",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "Which statement about the relationship between regular expressions and NFAs is correct?",
+      "answers": {
+        "a": "Every regular expression can be converted to an equivalent NFA",
+        "b": "Every NFA can be converted to an equivalent regular expression",
+        "c": "Regular expressions and NFAs have equivalent expressive power",
+        "d": "All of the above"
+      },
+      "explanations": {
+        "a": "Correct, but incomplete. Regular expressions can indeed be converted to equivalent NFAs.",
+        "b": "Correct, but incomplete. NFAs can indeed be converted to equivalent regular expressions.",
+        "c": "Correct, but incomplete. Regular expressions and NFAs do have equivalent expressive power for regular languages.",
+        "d": "Correct. All three statements are true - regular expressions and NFAs are equivalent in their ability to describe regular languages, and there are algorithms to convert between them."
+      },
+      "correctAnswer": "d",
+      "difficulty": "advanced"
     }
   ]
 }
