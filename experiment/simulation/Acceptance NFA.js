@@ -268,7 +268,7 @@ function clearElem(elem) {
   }
 }
 
-// Helper function to create curved path (simplified from DFA version)
+// Helper function to create curved path (simplified from NFA version)
 function createCurvedPath(start, end, curveFactor) {
   if (Math.abs(curveFactor) < 5) {
     return `M ${start.x} ${start.y} L ${end.x} ${end.y}`;

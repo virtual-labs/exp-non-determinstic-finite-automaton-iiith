@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DFA Language Acceptance - Automata Theory</title>
+  <title>NFA Language Acceptance - Automata Theory</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -294,7 +294,7 @@
         <div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center mx-auto mb-2">
           <span class="text-white font-bold text-xs">1</span>
         </div>
-        <p class="text-gray-700 text-xs">Select a DFA using "Change DFA"</p>
+        <p class="text-gray-700 text-xs">Select a NFA using "Change NFA"</p>
       </div>
       <div class="dark-glass rounded-xl p-3 text-center">
         <div class="w-6 h-6 bg-secondary rounded-full flex items-center justify-center mx-auto mb-2">
@@ -342,7 +342,7 @@
                   <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"></path>
                   </svg>
-                  Change DFA
+                  Change NFA
                 </button>
                 <button id="change_input" class="neu-button secondary px-2 py-1 rounded-xl font-medium text-xs transition-all hover:scale-105 active:scale-95 flex items-center gap-1">
                   <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
@@ -370,7 +370,7 @@
         <div class="dark-glass rounded-2xl p-3 flex-1 flex flex-col justify-between min-h-[220px] mt-2">
           <div id="DFA_description_container" class="mb-2">
             <div class="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-xl p-2 border border-gray-200">
-              <span id="DFA_description" class="text-black font-medium text-sm">Select a DFA to start</span>
+              <span id="DFA_description" class="text-black font-medium text-sm">Select a NFA to start</span>
             </div>
           </div>
           <h3 class="text-base font-semibold text-gray-800 mb-2 flex items-center">
@@ -403,7 +403,7 @@
     </div>
   </div>
 
-  <script src="Acceptance DFA.js"></script>
+  <script src="Acceptance NFA.js"></script>
   <script>
     // Patch: Ensure input string numbers and DFA description are always black
     function refreshInput() {
