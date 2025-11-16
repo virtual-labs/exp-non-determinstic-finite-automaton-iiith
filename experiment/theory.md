@@ -23,7 +23,23 @@ A *Non-Deterministic Finite State Machine* (FSM) is a $ 5 $-tuple $ (Q, \Sigma, 
 - $ q_0 $ is the *start state*, and
 - $ F\subseteq Q $ is the set of *accept states*.
 
-In other words, in a non-deterministic finite state machine, at any point there may exist several choices for the next state. Non-determinism can be viewed as a generalization of determinism and thus every deterministic finite automaton is a non-deterministic finite automaton.
+In other words, in a non-deterministic finite state machine, at any point there may exist zero, one, or several choices for the next state. Non-determinism can be viewed as a generalization of determinism and thus every deterministic finite automaton is a non-deterministic finite automaton.
+
+#### Key Differences Between DFAs and NFAs
+
+It is important to note the following distinctions:
+
+1. **Number of transitions**: In a DFA, from each state, there is exactly one transition for each input symbol. In an NFA, from each state, there can be zero, one, or multiple transitions for a given input symbol.
+
+2. **Epsilon transitions**: NFAs can have transitions labeled with $ \varepsilon $ (epsilon), which represent transitions that can be taken without consuming any input symbol. DFAs do not have epsilon transitions.
+
+3. **Determinism**: Every DFA is also an NFA (a special case where each state has exactly one transition per symbol and no epsilon transitions). However, not every NFA can be directly used as a DFA without conversion.
+
+4. **Variants of NFAs**: NFAs can be categorized based on their properties:
+   - NFAs without epsilon transitions (simpler NFAs)
+   - NFAs with epsilon transitions ($ \varepsilon $-NFAs)
+   - NFAs where every state has at least one transition for each symbol
+   - NFAs where some states may have no transitions for certain symbols
 
 #### Example 1
 Now let us look at an example of a Non-deterministic Finite State Automaton.
