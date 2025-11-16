@@ -2,60 +2,225 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "How many transition functions does a NFA have?",
+      "question": "What is the main difference between a DFA and an NFA?",
       "answers": {
-        "a": "atleast one",
-        "b": "atmost one",
-        "c": "exactly one"
+        "a": "DFAs can accept more languages than NFAs",
+        "b": "NFAs can have multiple transitions for the same input symbol from a state",
+        "c": "DFAs require more memory than NFAs",
+        "d": "NFAs cannot have accept states"
       },
       "explanations": {
-        "a": "",
-        "b": "",
-        "c": ""
+        "a": "Incorrect. DFAs and NFAs accept the same class of languages (regular languages).",
+        "b": "Correct. In an NFA, a state can have zero, one, or multiple transitions for the same input symbol, whereas a DFA has exactly one transition per symbol from each state.",
+        "c": "Incorrect. Both DFAs and NFAs have constant memory (only remember current state).",
+        "d": "Incorrect. NFAs do have accept states, just like DFAs."
       },
-      "correctAnswer": "a",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "Can an NFA be converted to a DFA?",
+      "question": "How does an NFA decide to accept a string?",
       "answers": {
-        "a": "yes",
-        "b": "no",
-        "c": "yes for only simple DFAs"
+        "a": "If all possible paths lead to accept states",
+        "b": "If at least one possible path leads to an accept state",
+        "c": "If the majority of paths lead to accept states",
+        "d": "If the first path explored leads to an accept state"
       },
       "explanations": {
-        "a": "",
-        "b": "",
-        "c": ""
+        "a": "Incorrect. Not all paths need to lead to accept states.",
+        "b": "Correct. An NFA accepts a string if there exists at least one sequence of transitions that leads to an accept state after processing the entire input.",
+        "c": "Incorrect. The number of accepting vs rejecting paths doesn't matter; only whether at least one accepting path exists.",
+        "d": "Incorrect. The order of path exploration doesn't determine acceptance."
       },
-      "correctAnswer": "a",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "Can an NFA be constructed such that the final symbol in input has occured before?",
+      "question": "What is an epsilon (ε) transition in an NFA?",
       "answers": {
-        "a": "yes",
-        "b": "no"
+        "a": "A transition that requires the empty string as input",
+        "b": "A transition that can be taken without consuming any input symbol",
+        "c": "A transition to the start state",
+        "d": "A transition that rejects the input"
       },
       "explanations": {
-        "a": "",
-        "b": ""
+        "a": "Incorrect. Epsilon transitions don't require any input at all.",
+        "b": "Correct. An epsilon transition allows the automaton to change states without reading any input symbol.",
+        "c": "Incorrect. Epsilon transitions can go to any state, not just the start state.",
+        "d": "Incorrect. Epsilon transitions don't inherently reject input; they're just free transitions."
       },
-      "correctAnswer": "a",
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Can a DFA be considered as a special case of an NFA?",
+      "answers": {
+        "a": "No, they are completely different models",
+        "b": "Yes, every DFA is an NFA with exactly one transition per state-symbol pair",
+        "c": "Only if the DFA has no accept states",
+        "d": "Only if the DFA has epsilon transitions"
+      },
+      "explanations": {
+        "a": "Incorrect. DFAs are indeed a special case of NFAs.",
+        "b": "Correct. Every DFA is an NFA where each state has exactly one transition for each input symbol and no epsilon transitions.",
+        "c": "Incorrect. The presence of accept states doesn't affect whether a DFA is an NFA.",
+        "d": "Incorrect. DFAs by definition don't have epsilon transitions."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What happens when an NFA is in a state with no transition for the current input symbol?",
+      "answers": {
+        "a": "The automaton crashes",
+        "b": "That computation path dies (is rejected)",
+        "c": "The automaton skips that symbol",
+        "d": "The automaton returns to the start state"
+      },
+      "explanations": {
+        "a": "Incorrect. The automaton doesn't crash; it handles missing transitions gracefully.",
+        "b": "Correct. When an NFA has no transition for a given input symbol from a state, that particular computation path dies. The string is accepted only if at least one other path reaches an accept state.",
+        "c": "Incorrect. Input symbols are never skipped.",
+        "d": "Incorrect. There's no automatic return to the start state."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Do NFAs and DFAs recognize the same class of languages?",
+      "answers": {
+        "a": "No, NFAs are more powerful",
+        "b": "No, DFAs are more powerful",
+        "c": "Yes, they both recognize exactly the regular languages",
+        "d": "It depends on whether epsilon transitions are allowed"
+      },
+      "explanations": {
+        "a": "Incorrect. NFAs are not more powerful than DFAs.",
+        "b": "Incorrect. DFAs are not more powerful than NFAs.",
+        "c": "Correct. NFAs and DFAs have equivalent expressive power - they both recognize exactly the class of regular languages.",
+        "d": "Incorrect. Even with epsilon transitions, NFAs still recognize only regular languages."
+      },
+      "correctAnswer": "c",
       "difficulty": "beginner"
     },
     {
-      "question": "Can an NFA be constructed such that the final symbol in input has never occured?",
+      "question": "How should non-determinism in NFAs be understood?",
       "answers": {
-        "a": "yes",
-        "b": "no"
+        "a": "As random choice between possible transitions",
+        "b": "As parallel exploration of all possible paths simultaneously",
+        "c": "As sequential trying of each path until one succeeds",
+        "d": "As choosing the shortest path to an accept state"
       },
       "explanations": {
-        "a": "",
-        "b": ""
+        "a": "Incorrect. Non-determinism is not about randomness.",
+        "b": "Correct. Non-determinism is best understood as parallel computation where the automaton explores all possible paths simultaneously. If any path leads to acceptance, the string is accepted.",
+        "c": "Incorrect. While this is one way to implement NFAs, it's not the conceptual model of non-determinism.",
+        "d": "Incorrect. Non-determinism doesn't involve choosing specific paths based on length."
       },
-      "correctAnswer": "a",
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What is the role of multiple transitions on the same symbol in an NFA?",
+      "answers": {
+        "a": "They create ambiguity that makes the NFA invalid",
+        "b": "They allow the NFA to explore multiple computational paths",
+        "c": "They must all lead to the same state",
+        "d": "They indicate an error in the NFA design"
+      },
+      "explanations": {
+        "a": "Incorrect. Multiple transitions don't make an NFA invalid; they're a defining feature.",
+        "b": "Correct. Multiple transitions on the same symbol allow the NFA to explore different computational paths simultaneously, which is the essence of non-determinism.",
+        "c": "Incorrect. Multiple transitions can lead to different states.",
+        "d": "Incorrect. Multiple transitions are intentional and a key feature of NFAs."
+      },
+      "correctAnswer": "b",
       "difficulty": "beginner"
+    },
+    {
+      "question": "Which statement about NFAs with epsilon transitions is correct?",
+      "answers": {
+        "a": "They are more powerful than NFAs without epsilon transitions",
+        "b": "They can recognize non-regular languages",
+        "c": "They can be converted to equivalent NFAs without epsilon transitions",
+        "d": "They are required for accepting the empty string"
+      },
+      "explanations": {
+        "a": "Incorrect. NFAs with and without epsilon transitions have the same expressive power.",
+        "b": "Incorrect. NFAs with epsilon transitions still only recognize regular languages.",
+        "c": "Correct. Any NFA with epsilon transitions can be converted to an equivalent NFA without epsilon transitions that recognizes the same language.",
+        "d": "Incorrect. Epsilon transitions are not required for accepting the empty string; that depends on whether the start state is an accept state."
+      },
+      "correctAnswer": "c",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "If an NFA has n states, what can we say about the number of possible computation paths for a string of length m?",
+      "answers": {
+        "a": "Exactly m paths",
+        "b": "At most n paths",
+        "c": "Potentially exponential in m",
+        "d": "Exactly n^m paths"
+      },
+      "explanations": {
+        "a": "Incorrect. The number of paths depends on the branching factor, not just the string length.",
+        "b": "Incorrect. The number of paths can exceed the number of states.",
+        "c": "Correct. Due to non-determinism and multiple transitions, the number of computation paths can grow exponentially with the input length, though it depends on the specific NFA structure.",
+        "d": "Incorrect. This formula doesn't accurately represent the number of paths in all cases."
+      },
+      "correctAnswer": "c",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "What is the language of an NFA?",
+      "answers": {
+        "a": "The set of all possible paths in the NFA",
+        "b": "The set of all strings that lead to at least one accept state",
+        "c": "The set of all strings that lead to all accept states",
+        "d": "The set of transitions in the NFA"
+      },
+      "explanations": {
+        "a": "Incorrect. The language is about strings, not paths.",
+        "b": "Correct. The language L(N) of an NFA N is the set of all strings for which there exists at least one computation path that ends in an accept state.",
+        "c": "Incorrect. The string doesn't need to reach all accept states, just at least one.",
+        "d": "Incorrect. The language is about accepted strings, not transitions."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Why might NFAs be easier to design than DFAs for certain languages?",
+      "answers": {
+        "a": "NFAs require fewer states in all cases",
+        "b": "NFAs allow more flexibility in modeling with multiple paths and epsilon transitions",
+        "c": "NFAs are always faster to simulate",
+        "d": "NFAs can accept more languages"
+      },
+      "explanations": {
+        "a": "Incorrect. While NFAs often have fewer states, this isn't true in all cases.",
+        "b": "Correct. NFAs provide more flexibility through non-determinism, multiple transitions, and epsilon transitions, making them more intuitive and compact for modeling certain patterns.",
+        "c": "Incorrect. NFAs are typically slower to simulate than equivalent DFAs.",
+        "d": "Incorrect. NFAs and DFAs accept the same class of languages."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "In an NFA, when processing an input string, what determines acceptance?",
+      "answers": {
+        "a": "The first path that completes",
+        "b": "The longest path that completes",
+        "c": "Whether any path ends in an accept state after all input is consumed",
+        "d": "Whether the most likely path ends in an accept state"
+      },
+      "explanations": {
+        "a": "Incorrect. The order of path completion doesn't matter.",
+        "b": "Incorrect. Path length doesn't determine acceptance.",
+        "c": "Correct. An NFA accepts a string if and only if at least one computation path ends in an accept state after consuming all the input symbols.",
+        "d": "Incorrect. There's no notion of 'most likely' path in NFA theory."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
     }
   ]
 }
